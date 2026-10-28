@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -u
+
+APPDIR="${APPDIR:-$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)}"
+LAUNCHER="${APPDIR}/run.sh"
+
+if [[ ! -x "${LAUNCHER}" ]]; then
+    printf 'Missing AeroCore Browser launcher: %s\n' "${LAUNCHER}" >&2
+    exit 1
+fi
+
+exec "${LAUNCHER}" "$@"

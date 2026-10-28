@@ -1,0 +1,30 @@
+{
+  "variant": "zh-CN",
+  "language": "zh-CN",
+  "languages": ["zh-CN", "zh", "en-US", "en"],
+  "bookmarks": [
+    {"title": "哔哩哔哩", "url": "https://www.bilibili.com"},
+    {"title": "优酷", "url": "https://www.youku.com"},
+    {"title": "爱奇艺", "url": "https://www.iqiyi.com"},
+    {"title": "腾讯视频", "url": "https://v.qq.com"},
+    {"title": "芒果TV", "url": "https://www.mgtv.com"},
+    {"title": "咪咕视频", "url": "https://www.miguvideo.com"},
+    {"title": "百度", "url": "https://www.baidu.com"}
+  ],
+  "home_sites": [
+    {"name": "汽核", "url": "https://aerocore.com.cn", "icon": ""},
+    {"name": "哔哩哔哩", "url": "https://www.bilibili.com", "icon": "bilibili.svg"},
+    {"name": "优酷", "url": "https://www.youku.com", "icon": "youku.svg"},
+    {"name": "爱奇艺", "url": "https://www.iqiyi.com", "icon": "iqiyi.svg"},
+    {"name": "腾讯视频", "url": "https://v.qq.com", "icon": "tencent-video.svg"},
+    {"name": "芒果TV", "url": "https://www.mgtv.com", "icon": "mango.svg"},
+    {"name": "咪咕视频", "url": "https://www.miguvideo.com", "icon": "migu.svg"},
+    {"name": "1905 电影网", "url": "https://www.1905.com", "icon": "1905dianying.svg"},
+    {"name": "抖音", "url": "https://www.douyin.com", "icon": "douyin.svg"},
+    {"name": "好看视频", "url": "https://haokan.baidu.com", "icon": "haokan.svg"},
+    {"name": "红果短剧", "url": "https://www.hongguoduanju.com", "icon": "hongguo.png"},
+    {"name": "快手", "url": "https://www.kuaishou.com", "icon": "kuaishou.svg"},
+    {"name": "虎牙直播", "url": "https://www.huya.com", "icon": "huya.svg"},
+    {"name": "搜狐视频", "url": "https://tv.sohu.com", "icon": "sohu.svg"}
+  ]
+}

@@ -1,0 +1,6 @@
+{
+    "repository": "AeroCore-IO/aerocore-browser-releases",
+    "api_base": "https://api.github.com",
+    "tarball_template": "AeroCore-Browser-v{version}_linux-x86_64.tar.gz",
+    "checksum_suffix": ".sha256"
+}

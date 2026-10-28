@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">AeroCore Browser placeholder icon</title>
+  <rect width="256" height="256" rx="48" fill="#243447"/>
+  <circle cx="128" cy="128" r="78" fill="#4da3ff"/>
+  <path d="M72 160 128 64l56 96h-30l-12-22H114l-12 22H72Zm53-48-10 18h26l-10-18a40 40 0 0 1-6 0Z" fill="#fff"/>
+  <text x="128" y="218" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#fff">BROWSER</text>
+</svg>

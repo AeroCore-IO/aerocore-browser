@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+APPDIR="${APPDIR:-$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)}"
+INSTALLER="${APPDIR}/usr/bin/aerocore-browser-installer"
+
+if [[ ! -x "${INSTALLER}" ]]; then
+    printf 'Missing AeroCore Browser installer: %s\n' "${INSTALLER}" >&2
+    exit 1
+fi
+
+missing="$(ldd "${INSTALLER}" 2>/dev/null | awk '/not found/ { print $1 }' | paste -sd, -)"
+if [[ -n "${missing}" ]]; then
+    message="AeroCore Browser Setup cannot start. Missing system libraries: ${missing}"
+    if command -v kdialog >/dev/null 2>&1; then
+        kdialog --error "${message}" --title "汽核浏览器"
+    elif command -v zenity >/dev/null 2>&1; then
+        zenity --error --title="汽核浏览器" --text="${message}"
+    else
+        printf '%s\n' "${message}" >&2
+    fi
+    exit 1
+fi
+
+export LD_LIBRARY_PATH="${APPDIR}/lib:${APPDIR}${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
+export QT_PLUGIN_PATH="${APPDIR}/plugins"
+export QT_QPA_PLATFORM_PLUGIN_PATH="${APPDIR}/plugins/platforms"
+# The portable bundle currently ships Qt's XCB platform plugin (the host's
+# Xwayland server is available in Desktop/Gaming Mode). Keep an explicit
+# override available for future bundles that include the Wayland plugin.
+export QT_QPA_PLATFORM="${QT_QPA_PLATFORM:-xcb}"
+
+export AEROCORE_APPIMAGE_DIR="${APPDIR}"
+exec "${INSTALLER}" "$@"

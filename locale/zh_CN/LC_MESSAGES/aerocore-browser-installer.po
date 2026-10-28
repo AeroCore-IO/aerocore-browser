@@ -1,0 +1,91 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: aerocore-browser-installer\n"
+"PO-Revision-Date: 2026-08-24 00:00+0800\n"
+"Last-Translator: AeroCore Browser contributors\n"
+"Language-Team: Simplified Chinese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+
+msgid "Install AeroCore Browser"
+msgstr "安装汽核浏览器"
+
+msgid "AeroCore Browser"
+msgstr "汽核浏览器"
+
+msgid "Ready to install"
+msgstr "准备安装"
+
+msgid "Install the browser for the current user. Existing files will be updated."
+msgstr "为当前用户安装浏览器。已有文件将被更新。"
+
+msgid "Install the browser for the current user."
+msgstr "为当前用户安装浏览器。"
+
+msgid "Installed version: %1\nAvailable version: %2"
+msgstr "已安装版本：%1\n可用版本：%2"
+
+msgid "Add AeroCore Browser to Steam as a non-Steam app"
+msgstr "将汽核浏览器作为非 Steam 应用添加到 Steam"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Install"
+msgstr "安装"
+
+msgid "Uninstall"
+msgstr "卸载"
+
+msgid "Downgrade unavailable"
+msgstr "无法降级"
+
+msgid "Reinstall"
+msgstr "重新安装"
+
+msgid "Upgrade"
+msgstr "升级"
+
+msgid "Uninstalling…"
+msgstr "正在卸载…"
+
+msgid "Installing…"
+msgstr "正在安装…"
+
+msgid "Removing the installed application."
+msgstr "正在移除已安装的应用。"
+
+msgid "Copying the application bundle. This may take a few minutes."
+msgstr "正在复制应用程序包，可能需要几分钟。"
+
+msgid "Uninstallation complete"
+msgstr "卸载完成"
+
+msgid "Installation complete"
+msgstr "安装完成"
+
+msgid "AeroCore Browser is ready from the application menu."
+msgstr "汽核浏览器已就绪，可从应用菜单启动。"
+
+msgid "Done"
+msgstr "完成"
+
+msgid "Installation failed"
+msgstr "安装失败"
+
+msgid "The installer process failed."
+msgstr "安装器进程执行失败。"
+
+msgid "Retry"
+msgstr "重试"
+
+msgid "Unable to start the installer process."
+msgstr "无法启动安装器进程。"
+
+msgid "Close Steam before installation"
+msgstr "安装前关闭 Steam"
+
+msgid "AeroCore Browser will be registered in Steam as a non-Steam app.\n\nThe installer must close Steam and any Steam helpers before updating Steam's shortcut database. Continue?"
+msgstr "汽核浏览器将作为非 Steam 应用注册到 Steam。\n\n安装器必须关闭 Steam 及其辅助进程，才能更新 Steam 的快捷方式数据库。是否继续？"

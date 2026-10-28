@@ -1,0 +1,627 @@
+{
+    "right": [
+        [
+            {
+                "type": "image",
+                "value": "op-lb.svg",
+                "imageWidth": 64,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "/"
+            },
+            {
+                "type": "image",
+                "value": "op-rb.svg",
+                "imageWidth": 64,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Switch top menu"
+            }
+        ]
+    ],
+    "homePageRight": [
+        [
+            {
+                "type": "image",
+                "value": "op-lb.svg",
+                "imageWidth": 64,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "/"
+            },
+            {
+                "type": "image",
+                "value": "op-rb.svg",
+                "imageWidth": 64,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Switch top menu"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-direction.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Switch websites"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keya.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Confirm"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keyb.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Cancel or return to session"
+            }
+        ]
+    ],
+    "openPageRight": [
+        [
+            {
+                "type": "image",
+                "value": "op-lb.svg",
+                "imageWidth": 64,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "/"
+            },
+            {
+                "type": "image",
+                "value": "op-rb.svg",
+                "imageWidth": 64,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Switch top menu"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-direction.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Move between fields"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keya.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Confirm"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keyb.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Cancel or return to session"
+            }
+        ]
+    ],
+    "addPageRight": [
+        [
+            {
+                "type": "image",
+                "value": "op-lb.svg",
+                "imageWidth": 64,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "/"
+            },
+            {
+                "type": "image",
+                "value": "op-rb.svg",
+                "imageWidth": 64,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Switch top menu"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-direction.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Move between fields"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keya.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Confirm"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keyb.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Cancel or return to session"
+            }
+        ]
+    ],
+    "sharePageRight": [
+        [
+            {
+                "type": "image",
+                "value": "op-lb.svg",
+                "imageWidth": 64,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "/"
+            },
+            {
+                "type": "image",
+                "value": "op-rb.svg",
+                "imageWidth": 64,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Switch top menu"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-direction.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Navigate sharing options"
+            }
+        ]
+    ],
+    "historyPageRight": [
+        [
+            {
+                "type": "image",
+                "value": "op-lb.svg",
+                "imageWidth": 64,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "/"
+            },
+            {
+                "type": "image",
+                "value": "op-rb.svg",
+                "imageWidth": 64,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Switch top menu"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-direction.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Navigate browsing history"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keya.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Confirm"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keyb.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Cancel or return to session"
+            }
+        ]
+    ],
+    "settingPageRight": [
+        [
+            {
+                "type": "image",
+                "value": "op-lb.svg",
+                "imageWidth": 64,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "/"
+            },
+            {
+                "type": "image",
+                "value": "op-rb.svg",
+                "imageWidth": 64,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Switch top menu"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-direction.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Navigate settings"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keya.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Confirm"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keyb.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Cancel or return to session"
+            }
+        ]
+    ],
+    "helpPageRight": [
+        [
+            {
+                "type": "image",
+                "value": "op-lb.svg",
+                "imageWidth": 64,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "/"
+            },
+            {
+                "type": "image",
+                "value": "op-rb.svg",
+                "imageWidth": 64,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Switch top menu"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keya.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Confirm"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keyb.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Cancel or return to session"
+            }
+        ]
+    ],
+    "aboutPageRight": [
+        [
+            {
+                "type": "image",
+                "value": "op-lb.svg",
+                "imageWidth": 64,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "/"
+            },
+            {
+                "type": "image",
+                "value": "op-rb.svg",
+                "imageWidth": 64,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Switch top menu"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keya.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Confirm"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keyb.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Cancel or return to session"
+            }
+        ]
+    ],
+    "browserPageRight": [],
+    "homePageWebsiteItem": [
+        [
+            {
+                "type": "image",
+                "value": "op-menu.svg",
+                "imageWidth": 50,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Menu"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keya.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Open"
+            }
+        ]
+    ],
+    "homePageAerocoreItem": [
+        [
+            {
+                "type": "image",
+                "value": "op-keya.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Open"
+            }
+        ]
+    ],
+    "aerocoreQrPanel": [
+        [
+            {
+                "type": "image",
+                "value": "op-keya.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Confirm"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keyb.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Back"
+            }
+        ]
+    ],
+    "historyPageCardItem": [
+        [
+            {
+                "type": "image",
+                "value": "op-menu.svg",
+                "imageWidth": 50,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Menu"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keya.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Open"
+            }
+        ]
+    ],
+    "settingPageItemPanel": [
+        [
+            {
+                "type": "image",
+                "value": "op-menu.svg",
+                "imageWidth": 50,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Menu"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keya.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Select"
+            }
+        ]
+    ],
+    "browserPageItemPanel": [
+        [
+            {
+                "type": "image",
+                "value": "op-keya.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Open"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-close.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Close tab"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keyy.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Close website session"
+            }
+        ],
+        [
+            {
+                "type": "image",
+                "value": "op-keyb.svg",
+                "imageWidth": 44,
+                "imageHeight": 44
+            },
+            {
+                "type": "text",
+                "value": "Hide HUD"
+            }
+        ]
+    ]
+}

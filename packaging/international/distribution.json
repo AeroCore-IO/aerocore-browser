@@ -1,0 +1,19 @@
+{
+  "variant": "international",
+  "language": "en-US",
+  "languages": ["en-US", "en"],
+  "bookmarks": [
+    {"title": "YouTube", "url": "https://www.youtube.com"},
+    {"title": "Twitch", "url": "https://www.twitch.tv"},
+    {"title": "Netflix", "url": "https://www.netflix.com"},
+    {"title": "Wikipedia", "url": "https://www.wikipedia.org"},
+    {"title": "Google", "url": "https://www.google.com"}
+  ],
+  "home_sites": [
+    {"name": "YouTube", "url": "https://www.youtube.com", "icon": ""},
+    {"name": "Twitch", "url": "https://www.twitch.tv", "icon": ""},
+    {"name": "Netflix", "url": "https://www.netflix.com", "icon": ""},
+    {"name": "Wikipedia", "url": "https://www.wikipedia.org", "icon": ""},
+    {"name": "Google", "url": "https://www.google.com", "icon": ""}
+  ]
+}

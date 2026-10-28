@@ -1,0 +1,703 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: aerocore-browser\n"
+"PO-Revision-Date: 2026-10-10 00:00+0800\n"
+"Last-Translator: AeroCore Browser contributors\n"
+"Language-Team: Simplified Chinese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+
+
+msgctxt "AboutPage"
+msgid "Exit application"
+msgstr "退出应用"
+
+msgctxt "AboutPage"
+msgid "Exiting will close the current browsing session"
+msgstr "退出后将关闭当前浏览会话"
+
+msgctxt "AboutPage"
+msgid "Confirm"
+msgstr "确定"
+
+msgctxt "AddPage"
+msgid "Add to library"
+msgstr "添加到网站库"
+
+msgctxt "AddPage"
+msgid "Add the current page to your library for quick access later"
+msgstr "将当前页面添加到网站库，方便以后快速访问"
+
+msgctxt "AddPage"
+msgid "Website name"
+msgstr "网站名称"
+
+msgctxt "AddPage"
+msgid "Website URL"
+msgstr "网站地址（URL）"
+
+msgctxt "AddPage"
+msgid "Add"
+msgstr "添加"
+
+msgctxt "AddPage"
+msgid "Website name cannot be empty"
+msgstr "网站名称不能为空"
+
+msgctxt "AddPage"
+msgid "Website URL cannot be empty"
+msgstr "网站地址不能为空"
+
+msgctxt "AddPage"
+msgid "Website added"
+msgstr "添加网站成功"
+
+msgctxt "AddPage"
+msgid "Reset"
+msgstr "重置"
+
+msgctxt "OpenPage"
+msgid "Enter a URL"
+msgstr "请输入网址"
+
+msgctxt "OpenPage"
+msgid "URL cannot be empty"
+msgstr "网址不能为空"
+
+msgctxt "OpenPage"
+msgid "Enter a valid URL"
+msgstr "请输入有效的网址"
+
+msgctxt "HistoryPage"
+msgid "Browsing history"
+msgstr "浏览历史"
+
+msgctxt "HistoryPage"
+msgid "Today"
+msgstr "今天"
+
+msgctxt "HistoryPage"
+msgid "Yesterday"
+msgstr "昨天"
+
+msgctxt "HistoryPage"
+msgid "Earlier"
+msgstr "更早"
+
+msgctxt "SettingPage"
+msgid "Settings"
+msgstr "设置"
+
+msgctxt "SettingPage"
+msgid "Interface scaling (does not affect web pages)"
+msgstr "界面缩放（不影响网页）"
+
+msgctxt "SettingPage"
+msgid "Cursor speed, size, auto-hide, and edge scrolling"
+msgstr "光标速度、光标大小、自动隐藏、边缘滚动"
+
+msgctxt "SettingPage"
+msgid "Clear browsing history, sign-in data, and cache"
+msgstr "清除历史、登录状态、缓存"
+
+msgctxt "SettingPage"
+msgid "Version, GPU mode, and data directory"
+msgstr "版本信息、GPU 模式、数据目录"
+
+msgctxt "SettingPage"
+msgid "Interface scale"
+msgstr "界面缩放"
+
+msgctxt "SettingPage"
+msgid "App UI scale"
+msgstr "App UI 缩放"
+
+msgctxt "SettingPage"
+msgid "Adjust the size of menus, text, and interface elements (does not affect web pages)"
+msgstr "调整菜单、文字和界面元素的大小（不影响网页）"
+
+msgctxt "SettingPage"
+msgid "Cursor and scrolling"
+msgstr "光标与滚动"
+
+msgctxt "SettingPage"
+msgid "Base cursor speed"
+msgstr "光标移动基础速度"
+
+msgctxt "SettingPage"
+msgid "Base cursor movement speed controlled by the gamepad stick"
+msgstr "手柄摇杆控制光标的基础移动速度"
+
+msgctxt "SettingPage"
+msgid "Base scrolling speed"
+msgstr "滚动基础速度"
+
+msgctxt "SettingPage"
+msgid "Web page scrolling speed controlled by the gamepad stick"
+msgstr "手柄摇杆滚动网页的速度"
+
+msgctxt "SettingPage"
+msgid "Cursor size"
+msgstr "光标大小"
+
+msgctxt "SettingPage"
+msgid "Gamepad cursor size on browser pages"
+msgstr "浏览页手柄光标的大小"
+
+msgctxt "SettingPage"
+msgid "Auto-hide cursor"
+msgstr "光标自动隐藏"
+
+msgctxt "SettingPage"
+msgid "Hide the cursor after the configured idle time; 0 seconds disables auto-hide"
+msgstr "无操作超过设定时间后自动隐藏光标，0 秒为不隐藏"
+
+msgctxt "SettingPage"
+msgid "Edge scrolling"
+msgstr "边缘自动滚动"
+
+msgctxt "SettingPage"
+msgid "Scroll the page when the cursor reaches the edge of the screen"
+msgstr "光标移动到屏幕边缘时自动滚动页面"
+
+msgctxt "SettingPage"
+msgid "Connected controller"
+msgstr "已连接手柄"
+
+msgctxt "SettingPage"
+msgid "Clear data"
+msgstr "清除数据"
+
+msgctxt "SettingPage"
+msgid "Clear browsing history"
+msgstr "清除浏览历史"
+
+msgctxt "SettingPage"
+msgid "Delete all saved browsing history"
+msgstr "删除所有已保存的浏览历史记录"
+
+msgctxt "SettingPage"
+msgid "Clear sign-in data"
+msgstr "清除登录状态"
+
+msgctxt "SettingPage"
+msgid "Clear website cookies; you will need to sign in again"
+msgstr "清除网站 Cookies，所有网站将需要重新登录"
+
+msgctxt "SettingPage"
+msgid "Clear cache"
+msgstr "清除缓存"
+
+msgctxt "SettingPage"
+msgid "Clear cached web images, scripts, and other data"
+msgstr "清除网页图片、脚本等缓存数据"
+
+msgctxt "SettingPage"
+msgid "Clear all data"
+msgstr "一键清除全部"
+
+msgctxt "SettingPage"
+msgid "System"
+msgstr "系统"
+
+msgctxt "SettingPage"
+msgid "GPU mode"
+msgstr "GPU 模式"
+
+msgctxt "SettingPage"
+msgid "Data directory"
+msgstr "数据目录"
+
+msgctxt "SettingPage"
+msgid "Log directory"
+msgstr "日志目录"
+
+msgctxt "SettingPage"
+msgid "Version"
+msgstr "版本"
+
+msgctxt "SettingPage"
+msgid "Update software"
+msgstr "软件更新"
+
+msgctxt "SettingPage"
+msgid "Interface scaling restored to automatic"
+msgstr "界面缩放已恢复自动"
+
+msgctxt "SettingPage"
+msgid "Browsing history cleared"
+msgstr "浏览历史已清除"
+
+msgctxt "SettingPage"
+msgid "Sign-in data cleared"
+msgstr "登录状态已清除"
+
+msgctxt "SettingPage"
+msgid "Cache cleared"
+msgstr "缓存已清除"
+
+msgctxt "SettingPage"
+msgid "All privacy data cleared"
+msgstr "隐私数据已全部清除"
+
+msgctxt "HomePage"
+msgid "Websites"
+msgstr "网站"
+
+msgctxt "HelpPage"
+msgid "Previous tab"
+msgstr "上一标签页"
+
+msgctxt "HelpPage"
+msgid "Previous session"
+msgstr "上一会话"
+
+msgctxt "HelpPage"
+msgid "Next tab"
+msgstr "下一标签页"
+
+msgctxt "HelpPage"
+msgid "Next session"
+msgstr "下一会话"
+
+msgctxt "HelpPage"
+msgid "Right stick"
+msgstr "右摇杆"
+
+msgctxt "HelpPage"
+msgid "Menu button"
+msgstr "菜单键"
+
+msgctxt "HelpPage"
+msgid "View button"
+msgstr "视图键"
+
+msgctxt "HelpPage"
+msgid "Controller guide"
+msgstr "手柄指南"
+
+msgctxt "HelpPage"
+msgid "Use your controller to move the cursor, scroll, and click while browsing."
+msgstr "浏览网页时，用手柄移动光标、滚动页面和点击。"
+
+msgctxt "HelpPage"
+msgid "Button guide"
+msgstr "按键说明"
+
+msgctxt "AerocoreQrPanel"
+msgid "Scan with WeChat to follow AeroCore"
+msgstr "微信扫码关注汽核"
+
+msgctxt "AerocoreQrPanel"
+msgid "From handhelds to TVs, from gaming to entertainment. AeroCore understands players. Follow us for product news, updates, and more."
+msgstr "从掌机到电视，从游戏到娱乐。汽核，更懂中国玩家。关注我们，及时了解产品进展、功能更新与更多精彩动态。"
+
+msgctxt "AerocoreQrPanel"
+msgid "Close"
+msgstr "关闭"
+
+msgctxt "MenuPanel"
+msgid "Choose an action"
+msgstr "请选择操作"
+
+msgctxt "FontSizePage"
+msgid "Minimum font size"
+msgstr "最小字体"
+
+msgctxt "HudPage"
+msgid "Switch to the previous website"
+msgstr "向左切换网站"
+
+msgctxt "HudPage"
+msgid "Switch to the next website"
+msgstr "向右切换网站"
+
+msgctxt "HudPage"
+msgid "Switch to the previous tab"
+msgstr "向左切换标签"
+
+msgctxt "HudPage"
+msgid "Switch to the next tab"
+msgstr "向右切换标签"
+
+msgctxt "ScaleSettingPage"
+msgid "Zoom level"
+msgstr "缩放倍率"
+
+msgctxt "MainWindow"
+msgid "Home"
+msgstr "首页"
+
+msgctxt "MainWindow"
+msgid "Open"
+msgstr "打开"
+
+msgctxt "MainWindow"
+msgid "Add"
+msgstr "添加"
+
+msgctxt "MainWindow"
+msgid "History"
+msgstr "历史"
+
+msgctxt "MainWindow"
+msgid "Settings"
+msgstr "设置"
+
+msgctxt "MainWindow"
+msgid "Help"
+msgstr "帮助"
+
+msgctxt "MainWindow"
+msgid "Quit"
+msgstr "退出"
+
+msgctxt "MainWindow"
+msgid "Quit application"
+msgstr "退出应用"
+
+msgctxt "HistoryPage"
+msgid "Delete history entry"
+msgstr "删除记录"
+
+msgctxt "HistoryPage"
+msgid "All history"
+msgstr "全部历史"
+
+msgctxt "SettingPage"
+msgid "Reset display settings"
+msgstr "重置显示设置"
+
+msgctxt "SettingPage"
+msgid "Display and readability"
+msgstr "显示与可读性"
+
+msgctxt "SettingPage"
+msgid "Input and controller"
+msgstr "输入与手柄"
+
+msgctxt "SettingPage"
+msgid "Privacy and data"
+msgstr "隐私与数据"
+
+msgctxt "SettingPage"
+msgid "System and about"
+msgstr "系统与关于"
+
+msgctxt "SettingPage"
+msgid "Small (44 px)"
+msgstr "小（44px）"
+
+msgctxt "SettingPage"
+msgid "Medium (56 px)"
+msgstr "标准（56px）"
+
+msgctxt "SettingPage"
+msgid "Large (68 px)"
+msgstr "大（68px）"
+
+msgctxt "SettingPage"
+msgid "Extra large (80 px)"
+msgstr "特大（80px）"
+
+msgctxt "SettingPage"
+msgid "Never"
+msgstr "不隐藏"
+
+msgctxt "SettingPage"
+msgid "%1 sec"
+msgstr "%1 秒"
+
+msgctxt "SettingPage"
+msgid "On"
+msgstr "开"
+
+msgctxt "SettingPage"
+msgid "Off"
+msgstr "关"
+
+msgctxt "SettingPage"
+msgid "Not connected"
+msgstr "未连接"
+
+msgctxt "SettingPage"
+msgid "GPU acceleration for web rendering (restart the app for changes to take effect)"
+msgstr "网页渲染 GPU 加速策略（修改后需重启应用生效）"
+
+msgctxt "SettingPage"
+msgid "GPU acceleration for web rendering"
+msgstr "网页渲染 GPU 加速策略"
+
+msgctxt "SettingPage"
+msgid "Automatic"
+msgstr "自动"
+
+msgctxt "SettingPage"
+msgid "Hardware acceleration"
+msgstr "硬件加速"
+
+msgctxt "SettingPage"
+msgid "Software rendering"
+msgstr "软件渲染"
+
+msgctxt "SettingPage"
+msgid "Processing…"
+msgstr "处理中…"
+
+msgctxt "SettingPage"
+msgid "Restart after quitting"
+msgstr "退出后重启"
+
+msgctxt "SettingPage"
+msgid "Update now"
+msgstr "立即更新"
+
+msgctxt "SettingPage"
+msgid "Check for updates"
+msgstr "检查更新"
+
+msgctxt "SettingPage"
+msgid "Confirm"
+msgstr "确认"
+
+msgctxt "SettingPage"
+msgid "Confirm %1"
+msgstr "确认%1"
+
+msgctxt "HomePage"
+msgid "Delete"
+msgstr "删除"
+
+msgctxt "HelpPage"
+msgid "D-pad"
+msgstr "方向键"
+
+msgctxt "HelpPage"
+msgid "Left stick"
+msgstr "左摇杆"
+
+msgctxt "HelpPage"
+msgid "Navigate"
+msgstr "上下左右导航"
+
+msgctxt "HelpPage"
+msgid "Move cursor"
+msgstr "移动光标"
+
+msgctxt "HelpPage"
+msgid "Shape buttons"
+msgstr "形状键"
+
+msgctxt "HelpPage"
+msgid "ABXY buttons"
+msgstr "ABXY键"
+
+msgctxt "HelpPage"
+msgid "Select an action"
+msgstr "操作/功能选择"
+
+msgctxt "HelpPage"
+msgid "Scroll page"
+msgstr "滚动页面"
+
+msgctxt "HelpPage"
+msgid "Go to home"
+msgstr "回首页"
+
+msgctxt "HelpPage"
+msgid "Show / hide HUD"
+msgstr "显示 / 隐藏 HUD"
+
+msgctxt "MenuPanel"
+msgid "Cancel"
+msgstr "取消"
+
+msgctxt "HudPage"
+msgid "%1 tabs"
+msgstr "%1 个标签页"
+
+msgctxt "OpBar"
+msgid "Switch top menu"
+msgstr "左右切换顶部菜单"
+
+msgctxt "OpBar"
+msgid "Switch websites"
+msgstr "上下左右切换网站"
+
+msgctxt "OpBar"
+msgid "Confirm"
+msgstr "确认"
+
+msgctxt "OpBar"
+msgid "Cancel or return to session"
+msgstr "取消或返回当前会话"
+
+msgctxt "OpBar"
+msgid "Move between fields"
+msgstr "移动输入位置"
+
+msgctxt "OpBar"
+msgid "Navigate sharing options"
+msgstr "上下左右切换分享"
+
+msgctxt "OpBar"
+msgid "Navigate browsing history"
+msgstr "上下左右切换浏览历史"
+
+msgctxt "OpBar"
+msgid "Navigate settings"
+msgstr "上下左右切换设置"
+
+msgctxt "OpBar"
+msgid "Menu"
+msgstr "菜单"
+
+msgctxt "OpBar"
+msgid "Open"
+msgstr "打开"
+
+msgctxt "OpBar"
+msgid "Back"
+msgstr "返回"
+
+msgctxt "OpBar"
+msgid "Select"
+msgstr "选择"
+
+msgctxt "OpBar"
+msgid "Close tab"
+msgstr "关闭标签页"
+
+msgctxt "OpBar"
+msgid "Close website session"
+msgstr "关闭网站会话"
+
+msgctxt "OpBar"
+msgid "Hide HUD"
+msgstr "收起 HUD"
+
+msgctxt "HelpKeys"
+msgid "Click"
+msgstr "点击"
+
+msgctxt "HelpKeys"
+msgid "Click page content."
+msgstr "点击网页内容。"
+
+msgctxt "HelpKeys"
+msgid "Back"
+msgstr "返回"
+
+msgctxt "HelpKeys"
+msgid "Short press: hide HUD, go back, close tab, or go home. Long press to close the current website."
+msgstr "短按依次：隐藏 HUD、后退、关标签、回首页；长按关闭当前网站。"
+
+msgctxt "HelpKeys"
+msgid "Close tab"
+msgstr "关闭标签"
+
+msgctxt "HelpKeys"
+msgid "Close the current tab; if it is the last tab, switch websites or go home."
+msgstr "关闭当前标签；最后一个则切换网站或回首页。"
+
+msgctxt "HelpKeys"
+msgid "Refresh"
+msgstr "刷新"
+
+msgctxt "HelpKeys"
+msgid "Refresh the current page."
+msgstr "刷新当前页面。"
+
+msgctxt "HelpKeys"
+msgid "LB+A: Drag"
+msgstr "LB+A 拖拽"
+
+msgctxt "HelpKeys"
+msgid "Hold to drag with the left stick; press A again to release."
+msgstr "锁定拖拽，用左摇杆拖动；再按 A 结束。"
+
+msgctxt "HelpKeys"
+msgid "RB+A: Right-click"
+msgstr "RB+A 右键"
+
+msgctxt "HelpKeys"
+msgid "Open the context menu at the cursor."
+msgstr "在光标位置打开右键菜单。"
+
+msgctxt "HelpKeys"
+msgid "LB+D-pad: Zoom and font size"
+msgstr "LB+方向键 缩放与字体"
+
+msgctxt "HelpKeys"
+msgid "Zoom the page with up/down; adjust minimum font size with left/right."
+msgstr "上下缩放页面，左右调整最小字体。"
+
+msgctxt "HelpKeys"
+msgid "LT+D-pad: Back / forward"
+msgstr "LT+方向键 后退 / 前进"
+
+msgctxt "HelpKeys"
+msgid "Left to go back; right to go forward."
+msgstr "左后退，右前进。"
+
+msgctxt "HelpKeys"
+msgid "LT/RT+stick: Precision / speed"
+msgstr "LT/RT+摇杆 精细 / 加速"
+
+msgctxt "HelpKeys"
+msgid "Hold LT for slower movement or scrolling; hold RT to move faster."
+msgstr "按住 LT 慢速移动或滚动，按住 RT 加速"
+
+msgctxt "UpdateController"
+msgid "Unable to start updater: %1"
+msgstr "无法启动 updater：%1"
+
+msgctxt "UpdateController"
+msgid "Checking for updates…"
+msgstr "正在检查更新…"
+
+msgctxt "UpdateController"
+msgid "Downloading update…"
+msgstr "正在下载更新…"
+
+msgctxt "UpdateController"
+msgid "Verifying update…"
+msgstr "正在校验更新…"
+
+msgctxt "UpdateController"
+msgid "Preparing update…"
+msgstr "正在准备更新…"
+
+msgctxt "UpdateController"
+msgid "Installing update…"
+msgstr "正在安装更新…"
+
+msgctxt "UpdateController"
+msgid "Update complete. Quit and reopen the browser to apply the new version."
+msgstr "更新完成。请退出并重新打开浏览器以应用新版本。"
+
+msgctxt "UpdateController"
+msgid "New version available: %1"
+msgstr "发现新版本：%1"
+
+msgctxt "UpdateController"
+msgid "Check for and install the latest version"
+msgstr "检查并获取最新版本"
+
+msgctxt "UpdateController"
+msgid "Already up to date (%1)"
+msgstr "当前已是最新版本（%1）"
+
+msgctxt "UpdateController"
+msgid "Update status: %1"
+msgstr "更新状态：%1"
+
+msgctxt "UpdateController"
+msgid "Updater not found: %1"
+msgstr "找不到 updater：%1"
+
+msgctxt "UpdateController"
+msgid "Update failed"
+msgstr "更新失败"

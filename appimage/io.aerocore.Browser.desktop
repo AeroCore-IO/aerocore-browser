@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=AeroCore Browser Setup
+Comment=Install AeroCore Browser for the current user
+Exec=aerocore-browser-installer
+Icon=io.aerocore.Browser
+Terminal=false
+Categories=System;
+StartupNotify=true

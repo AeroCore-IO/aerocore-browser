@@ -1,0 +1,703 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: aerocore-browser\n"
+"PO-Revision-Date: 2026-10-10 00:00+0800\n"
+"Last-Translator: AeroCore Browser contributors\n"
+"Language-Team: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_US\n"
+
+
+msgctxt "AboutPage"
+msgid "Exit application"
+msgstr "Exit application"
+
+msgctxt "AboutPage"
+msgid "Exiting will close the current browsing session"
+msgstr "Exiting will close the current browsing session"
+
+msgctxt "AboutPage"
+msgid "Confirm"
+msgstr "Confirm"
+
+msgctxt "AddPage"
+msgid "Add to library"
+msgstr "Add to library"
+
+msgctxt "AddPage"
+msgid "Add the current page to your library for quick access later"
+msgstr "Add the current page to your library for quick access later"
+
+msgctxt "AddPage"
+msgid "Website name"
+msgstr "Website name"
+
+msgctxt "AddPage"
+msgid "Website URL"
+msgstr "Website URL"
+
+msgctxt "AddPage"
+msgid "Add"
+msgstr "Add"
+
+msgctxt "AddPage"
+msgid "Website name cannot be empty"
+msgstr "Website name cannot be empty"
+
+msgctxt "AddPage"
+msgid "Website URL cannot be empty"
+msgstr "Website URL cannot be empty"
+
+msgctxt "AddPage"
+msgid "Website added"
+msgstr "Website added"
+
+msgctxt "AddPage"
+msgid "Reset"
+msgstr "Reset"
+
+msgctxt "OpenPage"
+msgid "Enter a URL"
+msgstr "Enter a URL"
+
+msgctxt "OpenPage"
+msgid "URL cannot be empty"
+msgstr "URL cannot be empty"
+
+msgctxt "OpenPage"
+msgid "Enter a valid URL"
+msgstr "Enter a valid URL"
+
+msgctxt "HistoryPage"
+msgid "Browsing history"
+msgstr "Browsing history"
+
+msgctxt "HistoryPage"
+msgid "Today"
+msgstr "Today"
+
+msgctxt "HistoryPage"
+msgid "Yesterday"
+msgstr "Yesterday"
+
+msgctxt "HistoryPage"
+msgid "Earlier"
+msgstr "Earlier"
+
+msgctxt "SettingPage"
+msgid "Settings"
+msgstr "Settings"
+
+msgctxt "SettingPage"
+msgid "Interface scaling (does not affect web pages)"
+msgstr "Interface scaling (does not affect web pages)"
+
+msgctxt "SettingPage"
+msgid "Cursor speed, size, auto-hide, and edge scrolling"
+msgstr "Cursor speed, size, auto-hide, and edge scrolling"
+
+msgctxt "SettingPage"
+msgid "Clear browsing history, sign-in data, and cache"
+msgstr "Clear browsing history, sign-in data, and cache"
+
+msgctxt "SettingPage"
+msgid "Version, GPU mode, and data directory"
+msgstr "Version, GPU mode, and data directory"
+
+msgctxt "SettingPage"
+msgid "Interface scale"
+msgstr "Interface scale"
+
+msgctxt "SettingPage"
+msgid "App UI scale"
+msgstr "App UI scale"
+
+msgctxt "SettingPage"
+msgid "Adjust the size of menus, text, and interface elements (does not affect web pages)"
+msgstr "Adjust the size of menus, text, and interface elements (does not affect web pages)"
+
+msgctxt "SettingPage"
+msgid "Cursor and scrolling"
+msgstr "Cursor and scrolling"
+
+msgctxt "SettingPage"
+msgid "Base cursor speed"
+msgstr "Base cursor speed"
+
+msgctxt "SettingPage"
+msgid "Base cursor movement speed controlled by the gamepad stick"
+msgstr "Base cursor movement speed controlled by the gamepad stick"
+
+msgctxt "SettingPage"
+msgid "Base scrolling speed"
+msgstr "Base scrolling speed"
+
+msgctxt "SettingPage"
+msgid "Web page scrolling speed controlled by the gamepad stick"
+msgstr "Web page scrolling speed controlled by the gamepad stick"
+
+msgctxt "SettingPage"
+msgid "Cursor size"
+msgstr "Cursor size"
+
+msgctxt "SettingPage"
+msgid "Gamepad cursor size on browser pages"
+msgstr "Gamepad cursor size on browser pages"
+
+msgctxt "SettingPage"
+msgid "Auto-hide cursor"
+msgstr "Auto-hide cursor"
+
+msgctxt "SettingPage"
+msgid "Hide the cursor after the configured idle time; 0 seconds disables auto-hide"
+msgstr "Hide the cursor after the configured idle time; 0 seconds disables auto-hide"
+
+msgctxt "SettingPage"
+msgid "Edge scrolling"
+msgstr "Edge scrolling"
+
+msgctxt "SettingPage"
+msgid "Scroll the page when the cursor reaches the edge of the screen"
+msgstr "Scroll the page when the cursor reaches the edge of the screen"
+
+msgctxt "SettingPage"
+msgid "Connected controller"
+msgstr "Connected controller"
+
+msgctxt "SettingPage"
+msgid "Clear data"
+msgstr "Clear data"
+
+msgctxt "SettingPage"
+msgid "Clear browsing history"
+msgstr "Clear browsing history"
+
+msgctxt "SettingPage"
+msgid "Delete all saved browsing history"
+msgstr "Delete all saved browsing history"
+
+msgctxt "SettingPage"
+msgid "Clear sign-in data"
+msgstr "Clear sign-in data"
+
+msgctxt "SettingPage"
+msgid "Clear website cookies; you will need to sign in again"
+msgstr "Clear website cookies; you will need to sign in again"
+
+msgctxt "SettingPage"
+msgid "Clear cache"
+msgstr "Clear cache"
+
+msgctxt "SettingPage"
+msgid "Clear cached web images, scripts, and other data"
+msgstr "Clear cached web images, scripts, and other data"
+
+msgctxt "SettingPage"
+msgid "Clear all data"
+msgstr "Clear all data"
+
+msgctxt "SettingPage"
+msgid "System"
+msgstr "System"
+
+msgctxt "SettingPage"
+msgid "GPU mode"
+msgstr "GPU mode"
+
+msgctxt "SettingPage"
+msgid "Data directory"
+msgstr "Data directory"
+
+msgctxt "SettingPage"
+msgid "Log directory"
+msgstr "Log directory"
+
+msgctxt "SettingPage"
+msgid "Version"
+msgstr "Version"
+
+msgctxt "SettingPage"
+msgid "Update software"
+msgstr "Update software"
+
+msgctxt "SettingPage"
+msgid "Interface scaling restored to automatic"
+msgstr "Interface scaling restored to automatic"
+
+msgctxt "SettingPage"
+msgid "Browsing history cleared"
+msgstr "Browsing history cleared"
+
+msgctxt "SettingPage"
+msgid "Sign-in data cleared"
+msgstr "Sign-in data cleared"
+
+msgctxt "SettingPage"
+msgid "Cache cleared"
+msgstr "Cache cleared"
+
+msgctxt "SettingPage"
+msgid "All privacy data cleared"
+msgstr "All privacy data cleared"
+
+msgctxt "HomePage"
+msgid "Websites"
+msgstr "Websites"
+
+msgctxt "HelpPage"
+msgid "Previous tab"
+msgstr "Previous tab"
+
+msgctxt "HelpPage"
+msgid "Previous session"
+msgstr "Previous session"
+
+msgctxt "HelpPage"
+msgid "Next tab"
+msgstr "Next tab"
+
+msgctxt "HelpPage"
+msgid "Next session"
+msgstr "Next session"
+
+msgctxt "HelpPage"
+msgid "Right stick"
+msgstr "Right stick"
+
+msgctxt "HelpPage"
+msgid "Menu button"
+msgstr "Menu button"
+
+msgctxt "HelpPage"
+msgid "View button"
+msgstr "View button"
+
+msgctxt "HelpPage"
+msgid "Controller guide"
+msgstr "Controller guide"
+
+msgctxt "HelpPage"
+msgid "Use your controller to move the cursor, scroll, and click while browsing."
+msgstr "Use your controller to move the cursor, scroll, and click while browsing."
+
+msgctxt "HelpPage"
+msgid "Button guide"
+msgstr "Button guide"
+
+msgctxt "AerocoreQrPanel"
+msgid "Scan with WeChat to follow AeroCore"
+msgstr "Scan with WeChat to follow AeroCore"
+
+msgctxt "AerocoreQrPanel"
+msgid "From handhelds to TVs, from gaming to entertainment. AeroCore understands players. Follow us for product news, updates, and more."
+msgstr "From handhelds to TVs, from gaming to entertainment. AeroCore understands players. Follow us for product news, updates, and more."
+
+msgctxt "AerocoreQrPanel"
+msgid "Close"
+msgstr "Close"
+
+msgctxt "MenuPanel"
+msgid "Choose an action"
+msgstr "Choose an action"
+
+msgctxt "FontSizePage"
+msgid "Minimum font size"
+msgstr "Minimum font size"
+
+msgctxt "HudPage"
+msgid "Switch to the previous website"
+msgstr "Switch to the previous website"
+
+msgctxt "HudPage"
+msgid "Switch to the next website"
+msgstr "Switch to the next website"
+
+msgctxt "HudPage"
+msgid "Switch to the previous tab"
+msgstr "Switch to the previous tab"
+
+msgctxt "HudPage"
+msgid "Switch to the next tab"
+msgstr "Switch to the next tab"
+
+msgctxt "ScaleSettingPage"
+msgid "Zoom level"
+msgstr "Zoom level"
+
+msgctxt "MainWindow"
+msgid "Home"
+msgstr "Home"
+
+msgctxt "MainWindow"
+msgid "Open"
+msgstr "Open"
+
+msgctxt "MainWindow"
+msgid "Add"
+msgstr "Add"
+
+msgctxt "MainWindow"
+msgid "History"
+msgstr "History"
+
+msgctxt "MainWindow"
+msgid "Settings"
+msgstr "Settings"
+
+msgctxt "MainWindow"
+msgid "Help"
+msgstr "Help"
+
+msgctxt "MainWindow"
+msgid "Quit"
+msgstr "Quit"
+
+msgctxt "MainWindow"
+msgid "Quit application"
+msgstr "Quit application"
+
+msgctxt "HistoryPage"
+msgid "Delete history entry"
+msgstr "Delete history entry"
+
+msgctxt "HistoryPage"
+msgid "All history"
+msgstr "All history"
+
+msgctxt "SettingPage"
+msgid "Reset display settings"
+msgstr "Reset display settings"
+
+msgctxt "SettingPage"
+msgid "Display and readability"
+msgstr "Display and readability"
+
+msgctxt "SettingPage"
+msgid "Input and controller"
+msgstr "Input and controller"
+
+msgctxt "SettingPage"
+msgid "Privacy and data"
+msgstr "Privacy and data"
+
+msgctxt "SettingPage"
+msgid "System and about"
+msgstr "System and about"
+
+msgctxt "SettingPage"
+msgid "Small (44 px)"
+msgstr "Small (44 px)"
+
+msgctxt "SettingPage"
+msgid "Medium (56 px)"
+msgstr "Medium (56 px)"
+
+msgctxt "SettingPage"
+msgid "Large (68 px)"
+msgstr "Large (68 px)"
+
+msgctxt "SettingPage"
+msgid "Extra large (80 px)"
+msgstr "Extra large (80 px)"
+
+msgctxt "SettingPage"
+msgid "Never"
+msgstr "Never"
+
+msgctxt "SettingPage"
+msgid "%1 sec"
+msgstr "%1 sec"
+
+msgctxt "SettingPage"
+msgid "On"
+msgstr "On"
+
+msgctxt "SettingPage"
+msgid "Off"
+msgstr "Off"
+
+msgctxt "SettingPage"
+msgid "Not connected"
+msgstr "Not connected"
+
+msgctxt "SettingPage"
+msgid "GPU acceleration for web rendering (restart the app for changes to take effect)"
+msgstr "GPU acceleration for web rendering (restart the app for changes to take effect)"
+
+msgctxt "SettingPage"
+msgid "GPU acceleration for web rendering"
+msgstr "GPU acceleration for web rendering"
+
+msgctxt "SettingPage"
+msgid "Automatic"
+msgstr "Automatic"
+
+msgctxt "SettingPage"
+msgid "Hardware acceleration"
+msgstr "Hardware acceleration"
+
+msgctxt "SettingPage"
+msgid "Software rendering"
+msgstr "Software rendering"
+
+msgctxt "SettingPage"
+msgid "Processing…"
+msgstr "Processing…"
+
+msgctxt "SettingPage"
+msgid "Restart after quitting"
+msgstr "Restart after quitting"
+
+msgctxt "SettingPage"
+msgid "Update now"
+msgstr "Update now"
+
+msgctxt "SettingPage"
+msgid "Check for updates"
+msgstr "Check for updates"
+
+msgctxt "SettingPage"
+msgid "Confirm"
+msgstr "Confirm"
+
+msgctxt "SettingPage"
+msgid "Confirm %1"
+msgstr "Confirm %1"
+
+msgctxt "HomePage"
+msgid "Delete"
+msgstr "Delete"
+
+msgctxt "HelpPage"
+msgid "D-pad"
+msgstr "D-pad"
+
+msgctxt "HelpPage"
+msgid "Left stick"
+msgstr "Left stick"
+
+msgctxt "HelpPage"
+msgid "Navigate"
+msgstr "Navigate"
+
+msgctxt "HelpPage"
+msgid "Move cursor"
+msgstr "Move cursor"
+
+msgctxt "HelpPage"
+msgid "Shape buttons"
+msgstr "Shape buttons"
+
+msgctxt "HelpPage"
+msgid "ABXY buttons"
+msgstr "ABXY buttons"
+
+msgctxt "HelpPage"
+msgid "Select an action"
+msgstr "Select an action"
+
+msgctxt "HelpPage"
+msgid "Scroll page"
+msgstr "Scroll page"
+
+msgctxt "HelpPage"
+msgid "Go to home"
+msgstr "Go to home"
+
+msgctxt "HelpPage"
+msgid "Show / hide HUD"
+msgstr "Show / hide HUD"
+
+msgctxt "MenuPanel"
+msgid "Cancel"
+msgstr "Cancel"
+
+msgctxt "HudPage"
+msgid "%1 tabs"
+msgstr "%1 tabs"
+
+msgctxt "OpBar"
+msgid "Switch top menu"
+msgstr "Switch top menu"
+
+msgctxt "OpBar"
+msgid "Switch websites"
+msgstr "Switch websites"
+
+msgctxt "OpBar"
+msgid "Confirm"
+msgstr "Confirm"
+
+msgctxt "OpBar"
+msgid "Cancel or return to session"
+msgstr "Cancel or return to session"
+
+msgctxt "OpBar"
+msgid "Move between fields"
+msgstr "Move between fields"
+
+msgctxt "OpBar"
+msgid "Navigate sharing options"
+msgstr "Navigate sharing options"
+
+msgctxt "OpBar"
+msgid "Navigate browsing history"
+msgstr "Navigate browsing history"
+
+msgctxt "OpBar"
+msgid "Navigate settings"
+msgstr "Navigate settings"
+
+msgctxt "OpBar"
+msgid "Menu"
+msgstr "Menu"
+
+msgctxt "OpBar"
+msgid "Open"
+msgstr "Open"
+
+msgctxt "OpBar"
+msgid "Back"
+msgstr "Back"
+
+msgctxt "OpBar"
+msgid "Select"
+msgstr "Select"
+
+msgctxt "OpBar"
+msgid "Close tab"
+msgstr "Close tab"
+
+msgctxt "OpBar"
+msgid "Close website session"
+msgstr "Close website session"
+
+msgctxt "OpBar"
+msgid "Hide HUD"
+msgstr "Hide HUD"
+
+msgctxt "HelpKeys"
+msgid "Click"
+msgstr "Click"
+
+msgctxt "HelpKeys"
+msgid "Click page content."
+msgstr "Click page content."
+
+msgctxt "HelpKeys"
+msgid "Back"
+msgstr "Back"
+
+msgctxt "HelpKeys"
+msgid "Short press: hide HUD, go back, close tab, or go home. Long press to close the current website."
+msgstr "Short press: hide HUD, go back, close tab, or go home. Long press to close the current website."
+
+msgctxt "HelpKeys"
+msgid "Close tab"
+msgstr "Close tab"
+
+msgctxt "HelpKeys"
+msgid "Close the current tab; if it is the last tab, switch websites or go home."
+msgstr "Close the current tab; if it is the last tab, switch websites or go home."
+
+msgctxt "HelpKeys"
+msgid "Refresh"
+msgstr "Refresh"
+
+msgctxt "HelpKeys"
+msgid "Refresh the current page."
+msgstr "Refresh the current page."
+
+msgctxt "HelpKeys"
+msgid "LB+A: Drag"
+msgstr "LB+A: Drag"
+
+msgctxt "HelpKeys"
+msgid "Hold to drag with the left stick; press A again to release."
+msgstr "Hold to drag with the left stick; press A again to release."
+
+msgctxt "HelpKeys"
+msgid "RB+A: Right-click"
+msgstr "RB+A: Right-click"
+
+msgctxt "HelpKeys"
+msgid "Open the context menu at the cursor."
+msgstr "Open the context menu at the cursor."
+
+msgctxt "HelpKeys"
+msgid "LB+D-pad: Zoom and font size"
+msgstr "LB+D-pad: Zoom and font size"
+
+msgctxt "HelpKeys"
+msgid "Zoom the page with up/down; adjust minimum font size with left/right."
+msgstr "Zoom the page with up/down; adjust minimum font size with left/right."
+
+msgctxt "HelpKeys"
+msgid "LT+D-pad: Back / forward"
+msgstr "LT+D-pad: Back / forward"
+
+msgctxt "HelpKeys"
+msgid "Left to go back; right to go forward."
+msgstr "Left to go back; right to go forward."
+
+msgctxt "HelpKeys"
+msgid "LT/RT+stick: Precision / speed"
+msgstr "LT/RT+stick: Precision / speed"
+
+msgctxt "HelpKeys"
+msgid "Hold LT for slower movement or scrolling; hold RT to move faster."
+msgstr "Hold LT for slower movement or scrolling; hold RT to move faster."
+
+msgctxt "UpdateController"
+msgid "Unable to start updater: %1"
+msgstr "Unable to start updater: %1"
+
+msgctxt "UpdateController"
+msgid "Checking for updates…"
+msgstr "Checking for updates…"
+
+msgctxt "UpdateController"
+msgid "Downloading update…"
+msgstr "Downloading update…"
+
+msgctxt "UpdateController"
+msgid "Verifying update…"
+msgstr "Verifying update…"
+
+msgctxt "UpdateController"
+msgid "Preparing update…"
+msgstr "Preparing update…"
+
+msgctxt "UpdateController"
+msgid "Installing update…"
+msgstr "Installing update…"
+
+msgctxt "UpdateController"
+msgid "Update complete. Quit and reopen the browser to apply the new version."
+msgstr "Update complete. Quit and reopen the browser to apply the new version."
+
+msgctxt "UpdateController"
+msgid "New version available: %1"
+msgstr "New version available: %1"
+
+msgctxt "UpdateController"
+msgid "Check for and install the latest version"
+msgstr "Check for and install the latest version"
+
+msgctxt "UpdateController"
+msgid "Already up to date (%1)"
+msgstr "Already up to date (%1)"
+
+msgctxt "UpdateController"
+msgid "Update status: %1"
+msgstr "Update status: %1"
+
+msgctxt "UpdateController"
+msgid "Updater not found: %1"
+msgstr "Updater not found: %1"
+
+msgctxt "UpdateController"
+msgid "Update failed"
+msgstr "Update failed"

@@ -1,0 +1,257 @@
+name: Build and Publish Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: debian:13
+    steps:
+      - name: Install build dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            build-essential \
+            file \
+            cmake \
+            ninja-build \
+            git \
+            make \
+            pkg-config \
+            curl \
+            wget \
+            unzip \
+            ca-certificates \
+            python3 \
+            python3-pip \
+            python3-venv \
+            patchelf \
+            proxychains4 \
+            gettext \
+            qt6-base-dev \
+            libqt6sql6-sqlite \
+            libmd4c0 \
+            qt6-declarative-dev \
+            qt6-svg-dev \
+            qt6-svg-plugins \
+            qt6-websockets-dev \
+            libsdl2-dev \
+            libx11-dev \
+            libxfixes-dev \
+            libxtst-dev \
+            libxcb1-dev \
+            libxcb-cursor0 \
+            libxcb-cursor-dev \
+            libnss3 \
+            libnss3-dev \
+            libnspr4 \
+            libnspr4-dev \
+            libasound2t64 \
+            libatk-bridge2.0-0 \
+            libcups2t64 \
+            libdrm2 \
+            libxkbcommon0 \
+            libxcomposite1 \
+            libxdamage1 \
+            libxrandr2 \
+            libgbm1 \
+            libpango-1.0-0 \
+            libcairo2 \
+            libxshmfence1 \
+            libx11-xcb1 \
+            libxkbcommon-x11-0 \
+            libgl-dev \
+            libopengl-dev \
+            libglx-dev \
+            libegl-dev \
+            libgl1-mesa-dri \
+            libegl1
+
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # The checkout directory can have a different owner inside the Debian
+      # container; mark it safe before reading tag metadata with Git.
+      - name: Configure Git safe directory
+        shell: bash
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: Cache CEF download
+        uses: actions/cache@v4
+        with:
+          path: third_party/downloads
+          key: aerocore-browser-cef-${{ runner.os }}-x86_64-${{ hashFiles('config/cef.mk') }}
+
+      - name: Cache AppImage tooling
+        uses: actions/cache@v4
+        with:
+          path: dist/tools
+          key: aerocore-browser-appimagetool-x86_64-continuous-v1
+
+      - name: Normalize release version
+        id: version
+        shell: bash
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          version="${TAG#v}"
+          [[ "$TAG" == v* ]] || { echo "Release must be a v-prefixed tag" >&2; exit 1; }
+          [[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || {
+            echo "Release tag must be v<major>.<minor>.<patch>: $TAG" >&2
+            exit 1
+          }
+          {
+            echo "version=$version"
+            echo "tag=$TAG"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Build installer and updater packages
+        shell: bash
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          set -euo pipefail
+          # GitHub Actions has direct network access; disable the local-only
+          # proxy wrapper that is useful on development hosts.
+          for variant in zh-CN international; do
+            make VERSION="$VERSION" AEROCORE_VERSION="$VERSION" \
+              PACKAGE_VARIANT="$variant" CEF_PROXY_CMD="" package-appimage
+          done
+          # Existing installations still request the original archive name.
+          legacy="dist/AeroCore-Browser-v${VERSION}_linux-x86_64.tar.gz"
+          cp "dist/AeroCore-Browser-zh-CN-v${VERSION}_linux-x86_64.tar.gz" "$legacy"
+          (cd dist && sha256sum "$(basename "$legacy")" > "$(basename "$legacy").sha256")
+
+      - name: Verify release assets
+        shell: bash
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          set -euo pipefail
+          bundle_root="aerocore-browser.AppDir"
+          bundle_dir="dist/${bundle_root}"
+          for variant in zh-CN international; do
+            tarball="dist/AeroCore-Browser-${variant}-v${VERSION}_linux-x86_64.tar.gz"
+            checksum="${tarball}.sha256"
+            appimage="dist/AeroCore-Browser-${variant}-x86_64.AppImage"
+            test -s "$tarball"
+            test -s "$checksum"
+            test -s "$appimage"
+            (cd dist && sha256sum --check "$(basename "$checksum")")
+            archive_files="$(tar -tzf "$tarball")"
+            grep -Fqx "${bundle_root}/manifest.yaml" <<<"$archive_files"
+            grep -Fqx "${bundle_root}/updater/aerocore-browser-updater" <<<"$archive_files"
+            test "$(tar -xOzf "$tarball" "${bundle_root}/manifest.yaml" \
+              | sed -n 's/^version: "\([^"]*\)"$/\1/p')" = "$VERSION"
+            test "$(tar -xOzf "$tarball" "${bundle_root}/manifest.yaml" \
+              | sed -n 's/^variant: "\([^"]*\)"$/\1/p')" = "$variant"
+            tar -xOzf "$tarball" "${bundle_root}/config/release-source.json" \
+              | python3 -c 'import json,sys; d=json.load(sys.stdin); v=sys.argv[1]; assert v in d["tarball_template"]; assert d["api_base"] == ("https://api.mirror.aerocore.com.cn" if v == "zh-CN" else "https://api.github.com")' "$variant"
+          done
+          python3 -c 'import json,pathlib; d=json.loads(pathlib.Path("config/release-source.json").read_text()); assert d["api_base"] == "https://api.github.com"; assert d["tarball_template"] == "AeroCore-Browser-v{version}_linux-x86_64.tar.gz"; assert d["checksum_suffix"] == ".sha256"'
+          legacy="dist/AeroCore-Browser-v${VERSION}_linux-x86_64.tar.gz"
+          test -s "$legacy"
+          (cd dist && sha256sum --check "$(basename "$legacy").sha256")
+
+          # Qt 6.8's libQt6Gui.so.6 requires libmd4c.so.0. Verify that the
+          # installer resolves the bundled copy instead of silently using a
+          # library supplied by the CI host.
+          md4c_bundle="$(readlink -f "${bundle_dir}/lib/libmd4c.so.0")"
+          test -s "$md4c_bundle"
+          md4c_resolved="$(ldd "${bundle_dir}/usr/bin/aerocore-browser-installer" \
+            | awk '$1 == "libmd4c.so.0" { print $3; exit }')"
+          test -n "$md4c_resolved"
+          test "$(readlink -f "$md4c_resolved")" = "$md4c_bundle"
+
+      - name: Read release notes from tag
+        id: release-notes
+        shell: bash
+        env:
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          set -euo pipefail
+          notes="$(git for-each-ref --format='%(contents)' "refs/tags/$TAG")"
+          if [[ -z "${notes//[[:space:]]/}" ]]; then
+            notes="$(git show -s --format=%B "$TAG")"
+          fi
+          {
+            echo 'notes<<RELEASE_NOTES_EOF'
+            printf '%s\n' "$notes"
+            echo 'RELEASE_NOTES_EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Upload release assets
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-assets
+          if-no-files-found: error
+          path: |
+            dist/AeroCore-Browser-zh-CN-x86_64.AppImage
+            dist/AeroCore-Browser-zh-CN-v${{ steps.version.outputs.version }}_linux-x86_64.tar.gz
+            dist/AeroCore-Browser-zh-CN-v${{ steps.version.outputs.version }}_linux-x86_64.tar.gz.sha256
+            dist/AeroCore-Browser-international-x86_64.AppImage
+            dist/AeroCore-Browser-international-v${{ steps.version.outputs.version }}_linux-x86_64.tar.gz
+            dist/AeroCore-Browser-international-v${{ steps.version.outputs.version }}_linux-x86_64.tar.gz.sha256
+            dist/AeroCore-Browser-v${{ steps.version.outputs.version }}_linux-x86_64.tar.gz
+            dist/AeroCore-Browser-v${{ steps.version.outputs.version }}_linux-x86_64.tar.gz.sha256
+          retention-days: 1
+
+    outputs:
+      tag: ${{ steps.version.outputs.tag }}
+      version: ${{ steps.version.outputs.version }}
+      release_notes: ${{ steps.release-notes.outputs.notes }}
+
+  publish-to-public:
+    name: Publish to public releases repository
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download release assets
+        uses: actions/download-artifact@v4
+        with:
+          name: release-assets
+          path: release-assets
+
+      - name: Check public repository token
+        env:
+          RELEASE_REPO_TOKEN: ${{ secrets.AEROCORE_BROWSER_RELEASE_TOKEN }}
+        run: |
+          if [[ -z "$RELEASE_REPO_TOKEN" ]]; then
+            echo "Missing AEROCORE_BROWSER_RELEASE_TOKEN repository secret" >&2
+            exit 1
+          fi
+
+      - name: Create public GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          repository: AeroCore-IO/aerocore-browser-releases
+          token: ${{ secrets.AEROCORE_BROWSER_RELEASE_TOKEN }}
+          tag_name: ${{ needs.build.outputs.tag }}
+          target_commitish: main
+          name: AeroCore Browser ${{ needs.build.outputs.tag }}
+          body: ${{ needs.build.outputs.release_notes }}
+          files: |
+            release-assets/AeroCore-Browser-zh-CN-x86_64.AppImage
+            release-assets/AeroCore-Browser-zh-CN-v${{ needs.build.outputs.version }}_linux-x86_64.tar.gz
+            release-assets/AeroCore-Browser-zh-CN-v${{ needs.build.outputs.version }}_linux-x86_64.tar.gz.sha256
+            release-assets/AeroCore-Browser-international-x86_64.AppImage
+            release-assets/AeroCore-Browser-international-v${{ needs.build.outputs.version }}_linux-x86_64.tar.gz
+            release-assets/AeroCore-Browser-international-v${{ needs.build.outputs.version }}_linux-x86_64.tar.gz.sha256
+            release-assets/AeroCore-Browser-v${{ needs.build.outputs.version }}_linux-x86_64.tar.gz
+            release-assets/AeroCore-Browser-v${{ needs.build.outputs.version }}_linux-x86_64.tar.gz.sha256

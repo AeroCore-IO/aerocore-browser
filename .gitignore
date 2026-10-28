@@ -1,0 +1,46 @@
+/build/
+/build*/
+/dist/
+/cmake-build-*/
+
+# CMake and generated build files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+CTestTestfile.cmake
+Testing/
+
+# Qt
+.cache/
+.qt/
+*.user
+*.autosave
+*.qrc.depends
+*.qmlc
+*.jsc
+
+# IDE and editor state
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Logs and local runtime artifacts
+*.log
+cef.log
+
+# Local third-party binaries, downloads, and source-build worktrees
+third_party/cef/
+third_party/downloads/
+third_party/cef-source-build/
+third_party/widevine/
+third_party/qt/
+third_party/SDL2-*/
+testres
+install

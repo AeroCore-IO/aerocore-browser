@@ -1,0 +1,77 @@
+[
+    {
+        "title": "Click",
+        "description": "Click page content.",
+        "image": [
+            "op-keya.svg"
+        ]
+    },
+    {
+        "title": "Back",
+        "description": "Short press: hide HUD, go back, close tab, or go home. Long press to close the current website.",
+        "image": [
+            "op-keyb.svg"
+        ]
+    },
+    {
+        "title": "Close tab",
+        "description": "Close the current tab; if it is the last tab, switch websites or go home.",
+        "image": [
+            "op-close.svg"
+        ]
+    },
+    {
+        "title": "Refresh",
+        "description": "Refresh the current page.",
+        "image": [
+            "op-keyy.svg"
+        ]
+    },
+    {
+        "title": "LB+A: Drag",
+        "description": "Hold to drag with the left stick; press A again to release.",
+        "image": [
+            "op-lb.svg",
+            "+",
+            "op-keya.svg"
+        ]
+    },
+    {
+        "title": "RB+A: Right-click",
+        "description": "Open the context menu at the cursor.",
+        "image": [
+            "op-rb.svg",
+            "+",
+            "op-keya.svg"
+        ]
+    },
+    {
+        "title": "LB+D-pad: Zoom and font size",
+        "description": "Zoom the page with up/down; adjust minimum font size with left/right.",
+        "image": [
+            "op-lb.svg",
+            "+",
+            "op-direction.svg"
+        ]
+    },
+    {
+        "title": "LT+D-pad: Back / forward",
+        "description": "Left to go back; right to go forward.",
+        "image": [
+            "op-lt.svg",
+            "+",
+            "op-direction.svg"
+        ]
+    },
+    {
+        "title": "LT/RT+stick: Precision / speed",
+        "description": "Hold LT for slower movement or scrolling; hold RT to move faster.",
+        "image": [
+            "op-lt.svg",
+            "/",
+            "op-rt.svg",
+            "+",
+            "op-stick.svg"
+        ]
+    }
+]
