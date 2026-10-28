@@ -1,6 +1,16 @@
 # AeroCore Browser
 
-AeroCore Browser is a controller-first browser for the Gaming Mode of SteamOS-like systems. It uses Qt 6 for the interface, CEF for web pages, and SDL2 for gamepad input. It supports bookmarks, browsing history, per-site zoom, and a full-screen interface designed for TV and handheld displays.
+AeroCore Browser is a controller-first browser for the Gaming Mode of SteamOS-like systems. It uses Qt 6 for the interface, CEF for web pages, and SDL2 for gamepad input. Manage websites as named entries, with related tabs grouped into website sessions. It also supports browsing history and per-site zoom, with a full-screen interface designed for TV and handheld displays.
+
+## Screenshots
+
+### Home and bookmarks
+
+![AeroCore Browser home and bookmarks](docs/images/home-bookmarks.jpg)
+
+### Controller guide
+
+![AeroCore Browser controller guide](docs/images/controller-guide.jpg)
 
 ## Build and run
 
