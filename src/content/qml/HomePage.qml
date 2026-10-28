@@ -233,10 +233,10 @@ PageBase {
                     }
 
                     Image {
-                        width: 120
-                        height: 120
+                        width: 110
+                        height: 110
                         anchors.top: parent.top
-                        anchors.topMargin: 10
+                        anchors.topMargin: 16
                         anchors.horizontalCenter: parent.horizontalCenter
                         source: modelData.icon===""?AppUtils.img("website-default-icon.svg"):modelData.icon
                         fillMode: Image.PreserveAspectFit

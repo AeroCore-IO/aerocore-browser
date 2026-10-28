@@ -273,12 +273,33 @@ bool WebsiteRepository::isEmpty() const
 
 int WebsiteRepository::importPresetsIfEmpty()
 {
-    if (!DatabaseManager::isInitialized() || !isEmpty()) {
+    if (!DatabaseManager::isInitialized()) {
+        return 0;
+    }
+
+    const QList<PresetWebsite> presets = builtInPresetWebsites();
+    // Older installations may already contain these presets with empty icon
+    // fields. Backfill only the bundled preset URLs and preserve user icons.
+    for (const PresetWebsite &preset : presets) {
+        if (preset.iconFileName.isEmpty()) {
+            continue;
+        }
+        const QString normalizedUrl = normalizeWebsiteUrl(preset.url);
+        const std::optional<Website> existing = findByUrl(normalizedUrl);
+        if (!existing.has_value() || !existing->icon.isEmpty()) {
+            continue;
+        }
+        const QString icon = WebsiteIconStorage::installPresetIcon(preset.iconFileName);
+        if (!icon.isEmpty()) {
+            updateIconIfEmpty(existing->id, icon);
+        }
+    }
+
+    if (!isEmpty()) {
         return 0;
     }
 
     int imported = 0;
-    const QList<PresetWebsite> presets = builtInPresetWebsites();
     for (const PresetWebsite &preset : presets) {
         const QString normalizedUrl = normalizeWebsiteUrl(preset.url);
         if (normalizedUrl.isEmpty() || urlExists(normalizedUrl)) {
