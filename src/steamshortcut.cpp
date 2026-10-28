@@ -559,6 +559,116 @@ int installShortcut(const QString &path,
     return 0;
 }
 
+QString unquotePath(QByteArray value)
+{
+    if (value.size() >= 2 && value.startsWith('"') && value.endsWith('"')) {
+        value = value.sliced(1, value.size() - 2);
+    }
+    return QString::fromUtf8(value);
+}
+
+bool isWithinDirectory(const QString &path, const QString &directory)
+{
+    if (path.isEmpty() || directory.isEmpty()) {
+        return false;
+    }
+    const QString normalizedDirectory = QDir::cleanPath(QFileInfo(directory).absoluteFilePath());
+    const QString normalizedPath = QDir::cleanPath(QFileInfo(path).absoluteFilePath());
+    return normalizedPath == normalizedDirectory
+        || normalizedPath.startsWith(normalizedDirectory + QDir::separator());
+}
+
+int removeShortcuts(const QStringList &paths, const QString &installDir)
+{
+    int removedCount = 0;
+    const QString normalizedInstallDir = QDir::cleanPath(QFileInfo(installDir).absoluteFilePath());
+    for (const QString &path : paths) {
+        QFile file(path);
+        if (!file.exists() || file.size() == 0) {
+            continue;
+        }
+        if (!file.open(QIODevice::ReadOnly)) {
+            QTextStream(stderr) << "Could not read " << path << '\n';
+            return 1;
+        }
+        QVector<VdfNode> root;
+        QString error;
+        if (!VdfReader(file.readAll()).read(&root, &error)) {
+            QTextStream(stderr) << "Could not read " << path << ": " << error << '\n';
+            return 1;
+        }
+
+        VdfNode *shortcuts = findNode(&root, "shortcuts");
+        if (!shortcuts || shortcuts->type != kObject) {
+            continue;
+        }
+
+        QVector<quint32> removedAppIds;
+        int removedFromFile = 0;
+        const auto newEnd = std::remove_if(shortcuts->children.begin(), shortcuts->children.end(),
+                                           [&](const VdfNode &entry) {
+            if (entry.type != kObject) {
+                return false;
+            }
+            const QString executable = unquotePath(fieldString(entry.children, "exe"));
+            const QString startDir = QString::fromUtf8(fieldString(entry.children, "StartDir"));
+            const QString shortcutPath = QString::fromUtf8(fieldString(entry.children, "ShortcutPath"));
+            const bool belongsToInstall = isWithinDirectory(executable, normalizedInstallDir)
+                || (!startDir.isEmpty()
+                    && QDir::cleanPath(QFileInfo(startDir).absoluteFilePath()) == normalizedInstallDir)
+                || (!shortcutPath.isEmpty()
+                    && QDir::cleanPath(QFileInfo(shortcutPath).absoluteFilePath()) == normalizedInstallDir);
+            if (!belongsToInstall) {
+                return false;
+            }
+            const VdfNode *appIdNode = findNode(entry.children, "appid");
+            if (appIdNode && appIdNode->type == kInt32) {
+                removedAppIds.append(static_cast<quint32>(appIdNode->int32Value));
+            }
+            ++removedCount;
+            ++removedFromFile;
+            return true;
+        });
+        shortcuts->children.erase(newEnd, shortcuts->children.end());
+        if (removedFromFile == 0) {
+            continue;
+        }
+
+        QFile::remove(path + QStringLiteral(".bak"));
+        if (!QFile::copy(path, path + QStringLiteral(".bak"))) {
+            QTextStream(stderr) << "Could not back up " << path << '\n';
+            return 1;
+        }
+        QByteArray output;
+        writeObject(&output, root);
+        QSaveFile save(path);
+        if (!save.open(QIODevice::WriteOnly) || save.write(output) != output.size() || !save.commit()) {
+            QTextStream(stderr) << "Could not write " << path << '\n';
+            return 1;
+        }
+
+        const QString gridDir = QFileInfo(path).dir().filePath(QStringLiteral("grid"));
+        for (const quint32 appId : removedAppIds) {
+            const QStringList artworkFiles{
+                QStringLiteral("%1.png").arg(appId),
+                QStringLiteral("%1p.png").arg(appId),
+                QStringLiteral("%1_logo.png").arg(appId),
+                QStringLiteral("%1_header.jpg").arg(appId),
+                QStringLiteral("%1_hero.png").arg(appId),
+            };
+            for (const QString &artworkFile : artworkFiles) {
+                QFile::remove(QDir(gridDir).filePath(artworkFile));
+            }
+        }
+        QTextStream(stdout) << "Removed AeroCore Browser Steam shortcut from " << path << '\n';
+    }
+
+    if (removedCount == 0) {
+        QTextStream(stdout) << "No AeroCore Browser Steam shortcut found for " << normalizedInstallDir << '\n';
+    }
+    return 0;
+}
+
 } // namespace
 
 int main(int argc, char **argv)
@@ -576,6 +686,8 @@ int main(int argc, char **argv)
     const QCommandLineOption artworkOption(QStringLiteral("artwork-dir"), QStringLiteral("Steam artwork directory"), QStringLiteral("path"));
     const QCommandLineOption launchOptionsOption(QStringLiteral("launch-options"), QStringLiteral("Steam launch options"), QStringLiteral("options"));
     const QCommandLineOption fileOption(QStringLiteral("file"), QStringLiteral("override shortcuts.vdf path"), QStringLiteral("path"));
+    const QCommandLineOption removeOption(QStringLiteral("remove"), QStringLiteral("remove shortcuts for an installed directory"));
+    const QCommandLineOption installDirOption(QStringLiteral("install-dir"), QStringLiteral("installed application directory"), QStringLiteral("path"));
     parser.addOption(listOption);
     parser.addOption(nameOption);
     parser.addOption(launcherOption);
@@ -583,6 +695,8 @@ int main(int argc, char **argv)
     parser.addOption(artworkOption);
     parser.addOption(launchOptionsOption);
     parser.addOption(fileOption);
+    parser.addOption(removeOption);
+    parser.addOption(installDirOption);
     parser.process(app);
 
     QStringList existing = existingShortcutPaths();
@@ -591,6 +705,27 @@ int main(int argc, char **argv)
             existing = {parser.value(fileOption)};
         }
         return listShortcuts(existing);
+    }
+
+    if (parser.isSet(removeOption)) {
+        const QString installDir = parser.value(installDirOption);
+        if (installDir.isEmpty()) {
+            QTextStream(stderr) << "--remove requires --install-dir\n";
+            return 2;
+        }
+        QString targetError;
+        const QStringList targets = parser.isSet(fileOption)
+            ? QStringList{parser.value(fileOption)}
+            : shortcutTargets(&targetError);
+        if (targets.isEmpty()) {
+            if (!targetError.isEmpty()) {
+                QTextStream(stderr) << targetError << '\n';
+                return 1;
+            }
+            QTextStream(stdout) << "No Steam shortcut database found.\n";
+            return 0;
+        }
+        return removeShortcuts(targets, installDir);
     }
 
     const QString launcher = parser.value(launcherOption);

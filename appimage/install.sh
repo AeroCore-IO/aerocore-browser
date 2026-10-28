@@ -165,6 +165,19 @@ if [[ ${UNINSTALL} -eq 1 ]]; then
         exit 0
     fi
     notify_info "Uninstalling AeroCore Browser from ${INSTALL_DIR}..."
+    STEAM_HELPER="${APPDIR}/usr/bin/aerocore-steam-shortcut"
+    if [[ ! -x "${STEAM_HELPER}" ]]; then
+        notify_error "Steam shortcut helper is not available; refusing to remove the application without cleaning its Steam shortcut."
+        exit 1
+    fi
+    if ! stop_steam; then
+        notify_error "Steam could not be stopped; refusing to update its shortcut database."
+        exit 1
+    fi
+    if ! "${STEAM_HELPER}" --remove --install-dir "${INSTALL_DIR}"; then
+        notify_error "Steam shortcut removal failed; the application is still installed."
+        exit 1
+    fi
     rm -rf -- "${INSTALL_DIR}"
     rm -f -- "${DESKTOP_FILE:-${XDG_DATA_HOME:-${HOME}/.local/share}/applications/io.aerocore.Browser.desktop}"
     notify_info "AeroCore Browser was uninstalled."
