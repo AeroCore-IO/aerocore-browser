@@ -1,5 +1,5 @@
 {
-  "repository": "AeroCore-IO/aerocore-browser-releases",
+  "repository": "AeroCore-IO/aerocore-browser",
   "api_base": "https://api.mirror.aerocore.com.cn",
   "tarball_template": "AeroCore-Browser-zh-CN-v{version}_linux-x86_64.tar.gz",
   "checksum_suffix": ".sha256"

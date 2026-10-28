@@ -6,7 +6,7 @@ on:
       - "v*"
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: release-${{ github.ref_name }}
@@ -217,8 +217,8 @@ jobs:
       version: ${{ steps.version.outputs.version }}
       release_notes: ${{ steps.release-notes.outputs.notes }}
 
-  publish-to-public:
-    name: Publish to public releases repository
+  publish:
+    name: Publish release
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -228,20 +228,9 @@ jobs:
           name: release-assets
           path: release-assets
 
-      - name: Check public repository token
-        env:
-          RELEASE_REPO_TOKEN: ${{ secrets.AEROCORE_BROWSER_RELEASE_TOKEN }}
-        run: |
-          if [[ -z "$RELEASE_REPO_TOKEN" ]]; then
-            echo "Missing AEROCORE_BROWSER_RELEASE_TOKEN repository secret" >&2
-            exit 1
-          fi
-
-      - name: Create public GitHub release
+      - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
-          repository: AeroCore-IO/aerocore-browser-releases
-          token: ${{ secrets.AEROCORE_BROWSER_RELEASE_TOKEN }}
           tag_name: ${{ needs.build.outputs.tag }}
           target_commitish: main
           name: AeroCore Browser ${{ needs.build.outputs.tag }}
